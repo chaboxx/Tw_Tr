@@ -1,12 +1,21 @@
+/* eslint-disable import/no-unresolved */
+import { BiSolidHomeCircle } from "react-icons/bi";
+import { FaFeatherAlt } from "react-icons/fa";
+
+import { NavItem } from "@/shared/components/NavItem";
+import { Button } from "@/shared/components/Button";
+
 export default function Home() {
   return (
-    <div className="bg-current">
-      <h1 className="text-red-400">hola</h1>
-      <h1 className="text-red-400">hola</h1>
+    <div className="container">
+      <NavItem
+        areThereNewRequests
+        Icon={<BiSolidHomeCircle size={20} />}
+        href="/"
+        label="Inicio"
+      />
 
-      <div>
-        <button className="b">Hola Mundo</button>
-      </div>
+      <Button Icon={<FaFeatherAlt size={22} />} />
     </div>
   );
 }
