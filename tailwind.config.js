@@ -20,6 +20,9 @@ export const theme = {
       900: "#000000",
       700: "#181818",
     },
+    primary: {
+      900: "#1d9bf0",
+    },
   },
 };
 export const plugins = [];
