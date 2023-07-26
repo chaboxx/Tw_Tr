@@ -14,8 +14,15 @@ export const TextArea: FC = () => {
   };
 
   const handleShowPrivacyOptions = () => setIsOpenprivacyOptions(true);
-  const handleHidePrivacyOptions = (e: KeyboardEvent<HTMLDivElement>) =>
-    e.code === "Escape" && setIsOpenprivacyOptions(false);
+  const handleHidePrivacyOptions = (event: KeyboardEvent<HTMLDivElement>) => {
+    if (event.code === "Escape") {
+      const target = event?.target as HTMLDivElement;
+
+      target.textContent = null;
+      setText("");
+      setIsOpenprivacyOptions(false);
+    }
+  };
 
   return (
     <div className="bg-black text-white p-2" onClick={handleShowPrivacyOptions}>
@@ -30,7 +37,7 @@ export const TextArea: FC = () => {
       <div
         className={`${
           isOpenprivacyOptions ? "flex" : "hidden"
-        } flex-row items-center gap-1.5 mt-3 pb-2.5 text-primary-900 border-gray-600 border-b-[1px]`}
+        } flex-row items-center gap-1.5 mt-3 pb-2.5 text-primary-900 border-gray-600 border-b-[1px] hover:cursor-pointer`}
       >
         <div>
           <BiWorld size={14} />

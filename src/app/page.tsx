@@ -2,7 +2,14 @@
 import { BiSolidHomeCircle } from "react-icons/bi";
 import { FaFeatherAlt } from "react-icons/fa";
 
-import { Avatar, Button, NavItem, TextArea } from "@/shared/components";
+import {
+  Avatar,
+  Button,
+  NavItem,
+  SectionLink,
+  TextArea,
+  SearchBar,
+} from "@/shared/components";
 
 export default function Home() {
   return (
@@ -16,6 +23,10 @@ export default function Home() {
       <Button Icon={<FaFeatherAlt size={22} />} label="Twittear" />
       <Avatar height={25} href="/test" imageUri="/avatar.jpg" width={25} />
       <TextArea />
+      <br />
+      <SectionLink label="Para ti" />
+      <br />
+      <SearchBar />
     </div>
   );
 }
