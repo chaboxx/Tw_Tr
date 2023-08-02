@@ -7,3 +7,6 @@ export * from "./SectionLink";
 export * from "./SearchBar";
 export * from "./Banner";
 export * from "./UserTitle";
+export * from "./UserTag";
+export * from "./Icon";
+export * from "./UserImage";

@@ -5,6 +5,8 @@ export const content = [
   "./src/pages/**/*.{js,ts,jsx,tsx,mdx}",
   "./src/components/**/*.{js,ts,jsx,tsx,mdx}",
   "./src/app/**/*.{js,ts,jsx,tsx,mdx}",
+  "./src/views/**/*.{js,ts,jsx,tsx,mdx}",
+  "./src/**/*.{js,ts,tsx,jsx}",
 ];
 export const theme = {
   extend: {
@@ -22,6 +24,10 @@ export const theme = {
     },
     primary: {
       900: "#1d9bf0",
+    },
+    gray: {
+      ...colors.gray,
+      default: "rgb(113, 118, 123)",
     },
   },
 };

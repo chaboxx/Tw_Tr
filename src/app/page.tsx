@@ -2,6 +2,8 @@
 import { BiSolidHomeCircle } from "react-icons/bi";
 import { FaFeatherAlt } from "react-icons/fa";
 
+import { Post } from "../views";
+
 import {
   Avatar,
   Button,
@@ -11,6 +13,7 @@ import {
   SearchBar,
   Banner,
   UserTitle,
+  UserTag,
 } from "@/shared/components";
 
 export default function Home() {
@@ -39,6 +42,12 @@ export default function Home() {
       />
       {/* <br />
       <UserTitle href="/test" title="El Programador Senior" /> */}
+      <br />
+
+      <UserTag tag="@chaboxxsama" />
+      <br />
+
+      <Post />
     </div>
   );
 }
