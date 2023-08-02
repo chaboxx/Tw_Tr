@@ -1,8 +1,10 @@
 "use client";
 import Link from "next/link";
 import { useRouter } from "next/navigation";
-import { type FC, type MouseEvent } from "react";
+import { useState, type FC, type MouseEvent } from "react";
 import { BsPatchCheckFill } from "react-icons/bs";
+
+import { useOpen } from "../hooks/useOpen";
 
 import { Button } from "./Button";
 import { Tooltip } from "./Tooltip";
@@ -26,10 +28,13 @@ export const UserTitle: FC<Props> = ({
 }) => {
   const router = useRouter();
 
-  const handleCheckIconClick = (event: MouseEvent<HTMLDivElement>) => {
+  const handleCheckIconClick = (handleOpen: (payload?: boolean) => void) => {
     if (href) {
       router.push(href);
+
+      return;
     }
+    handleOpen();
   };
 
   return (
@@ -41,13 +46,8 @@ export const UserTitle: FC<Props> = ({
       >
         {title}
       </Link>
-      <div className="relative" onClick={handleCheckIconClick}>
-        <BsPatchCheckFill
-          className="text-primary-900 cursor-pointer"
-          size={iconSize ?? 23}
-          style={iconStyle}
-        />
-        <Tooltip isOpen={true} onClose={() => {}}>
+      <Tooltip
+        element={
           <div className="flex flex-col gap-2">
             <p>Cuenta Verificada</p>
             <Button
@@ -57,8 +57,18 @@ export const UserTitle: FC<Props> = ({
             />
             <Button Icon={<BsPatchCheckFill />} label="Consigue la verficiacion" />
           </div>
-        </Tooltip>
-      </div>
+        }
+      >
+        {(_, handleOpen) => (
+          <div onClick={() => handleCheckIconClick(handleOpen)}>
+            <BsPatchCheckFill
+              className="text-primary-900 cursor-pointer"
+              size={iconSize ?? 23}
+              style={iconStyle}
+            />
+          </div>
+        )}
+      </Tooltip>
     </div>
   );
 };

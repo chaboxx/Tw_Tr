@@ -37,6 +37,8 @@ export default function Home() {
         title="El Programador Senior"
         titleStyle={{ pointerEvents: "none", textDecoration: "none" }}
       />
+      {/* <br />
+      <UserTitle href="/test" title="El Programador Senior" /> */}
     </div>
   );
 }
