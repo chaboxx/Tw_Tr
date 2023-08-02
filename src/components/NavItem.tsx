@@ -17,7 +17,7 @@ export const NavItem: FC<Props> = ({ href, Icon, areThereNewRequests, label }) =
   return (
     <Link
       className="flex w-fit pr-6 pl-3 py-2 
-        rounded-3xl border-r-2 flex-row gap-3 items-center  text-white bg-black hover:bg-dark-700 cursor-pointer
+        rounded-3xl border-r-2 flex-row gap-3 items-center text-white bg-black hover:bg-dark-700 cursor-pointer
         max-lg:p-3 max-lg:rounded-full
       "
       href={href}

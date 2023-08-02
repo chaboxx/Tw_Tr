@@ -4,12 +4,17 @@ import { type IconType } from "react-icons";
 interface Props {
   label: string;
   Icon: React.ReactElement<IconType>;
+  variant?: "primary" | "secondary";
+  style?: React.CSSProperties;
 }
-export const Button: FC<Props> = ({ Icon, label }) => {
+export const Button: FC<Props> = ({ Icon, label, variant, style }) => {
   return (
-    <div className="bg-[#1d9bf0] w-fit rounded-3xl px-6 py-3 text-center hover:bg-[#1a8cd8] cursor-pointer">
-      <p className="text-white font-semibold max-lg:hidden">{label}</p>
-      <div className="hidden text-white max-lg:flex ">{Icon}</div>
+    <div
+      className={`${variant === "primary" || !variant ? "btn-primary" : "btn-secondary"}`}
+      style={style}
+    >
+      <p className="font-semibold max-lg:hidden">{label}</p>
+      <div className="hidden max-lg:flex ">{Icon}</div>
     </div>
   );
 };

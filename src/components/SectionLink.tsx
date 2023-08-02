@@ -11,8 +11,7 @@ export const SectionLink: FC<Props> = ({ label }) => {
       <p className="text-white font-semibold text-lg">{label}</p>
       <div
         className={classnames(
-          `w-[${label.length}ch]`,
-          "bg-primary-900 mx-auto h-1.5 rounded mt-2",
+          `w-[${label.length.toString()}ch] bg-primary-900 mx-auto h-1.5 rounded mt-2`,
         )}
       />
     </div>

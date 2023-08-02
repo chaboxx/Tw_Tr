@@ -5,3 +5,5 @@ export * from "./NavItem";
 export * from "./TextArea";
 export * from "./SectionLink";
 export * from "./SearchBar";
+export * from "./Banner";
+export * from "./UserTitle";

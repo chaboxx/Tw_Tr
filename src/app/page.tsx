@@ -9,6 +9,8 @@ import {
   SectionLink,
   TextArea,
   SearchBar,
+  Banner,
+  UserTitle,
 } from "@/shared/components";
 
 export default function Home() {
@@ -27,6 +29,14 @@ export default function Home() {
       <SectionLink label="Para ti" />
       <br />
       <SearchBar />
+      <br />
+      <Banner />
+      <br />
+      {/* <UserTitle href="/test" title="El Programador Senior" /> */}
+      <UserTitle
+        title="El Programador Senior"
+        titleStyle={{ pointerEvents: "none", textDecoration: "none" }}
+      />
     </div>
   );
 }
