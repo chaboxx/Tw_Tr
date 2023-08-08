@@ -4,5 +4,8 @@
 		"source.fixAll.eslint": true
 	},
 	"editor.mouseWheelZoom": true,
-	"editor.wordWrap": "bounded"
+	"editor.wordWrap": "bounded",
+	"conventionalCommits.scopes": [
+		"maquetacion"
+	]
 }

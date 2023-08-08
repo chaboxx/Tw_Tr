@@ -15,6 +15,9 @@ export const theme = {
       "gradient-conic":
         "conic-gradient(from 180deg at 50% 50%, var(--tw-gradient-stops))",
     },
+    gridTemplateColumns: {
+      "main-layout": "2fr 4fr 3fr",
+    },
   },
   colors: {
     ...colors,
