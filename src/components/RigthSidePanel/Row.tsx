@@ -13,7 +13,9 @@ interface Props {
 
 export const Row: FC<Props> = ({ category, numberPosts, title, className }) => {
   return (
-    <div className={cn("hover:bg-[#1d1f23] cursor-pointer", className)}>
+    <div
+      className={cn("hover:bg-[#1d1f23] cursor-pointer flex flex-col gap-0.5", className)}
+    >
       <SecondaryText sizeText="text-sm" tag={category} />
       <p className="text-white font-bold">{title}</p>
       <SecondaryText sizeText="text-sm" tag={`${numberPosts} Posts`} />

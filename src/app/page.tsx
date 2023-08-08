@@ -17,7 +17,7 @@ import {
   SecondaryText,
 } from "@/shared/components";
 
-export default function Home() {
+export default async function Home() {
   return (
     <div className="container">
       <NavItem
@@ -36,13 +36,11 @@ export default function Home() {
       <br />
       <Banner />
       <br />
-      {/* <UserTitle href="/test" title="El Programador Senior" /> */}
       <UserTitle
         title="El Programador Senior"
         titleStyle={{ pointerEvents: "none", textDecoration: "none" }}
       />
-      {/* <br />
-      <UserTitle href="/test" title="El Programador Senior" /> */}
+
       <br />
 
       <SecondaryText tag="@chaboxxsama" />
@@ -54,7 +52,7 @@ export default function Home() {
       <Panel>
         <Title className="px-4 py-3">Hola Mundo</Title>
         <Row category="Tecnologia" className="px-4" numberPosts={100} title="React" />
-        <Footer className="px-4 py-3" />
+        <Footer className="px-4 py-3 rounded-b-xl " />
       </Panel>
 
       <br />
@@ -62,7 +60,7 @@ export default function Home() {
         <Title className="px-4 mb-2 pt-3">Hola Mundo</Title>
         <Row
           category="Tecnologia"
-          className="pb-3 px-4"
+          className="pb-3 px-4 rounded-b-xl"
           numberPosts={100}
           title="React"
         />

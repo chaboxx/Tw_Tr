@@ -8,7 +8,7 @@ interface Props extends PropsWithChildren {
 }
 export const Title: FC<Props> = ({ children, className, style }) => {
   return (
-    <h5 className={cn(`text-white font-bold text-xl`, className)} style={style}>
+    <h5 className={cn(`text-white font-bold text-xl `, className)} style={style}>
       {children}
     </h5>
   );
