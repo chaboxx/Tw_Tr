@@ -1,0 +1,16 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer components {
+    .btn {
+        @apply w-fit rounded-3xl px-6 py-3 text-center cursor-pointer;
+    }
+
+    .btn-primary {
+        @apply btn bg-[#1d9bf0] hover:bg-[#1a8cd8] text-white;
+    }
+    .btn-secondary {
+        @apply btn bg-[#eff3f4] hover:bg-[#d7dbdc] text-black;
+    }
+}

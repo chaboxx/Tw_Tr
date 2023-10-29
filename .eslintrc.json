@@ -1,15 +1,15 @@
 {
   "extends": [
-    "next/core-web-vitals",
     "plugin:prettier/recommended",
     "plugin:react/recommended",
     "eslint-config-prettier",
     "plugin:react-hooks/recommended",
     "prettier",
     "plugin:react/jsx-runtime",
-    "plugin:@typescript-eslint/recommended"
+    "plugin:@typescript-eslint/recommended",
+    "plugin:import/recommended"
   ],
-  "plugins": ["react"],
+  "plugins": ["react","prettier"],
   "parser": "@typescript-eslint/parser",
   "env": { 
     "browser": true,
